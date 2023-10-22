@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Light gray background color */
+    margin: 0;
+    padding: 0;
+    color: #333; /* Dark text color */
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Gray box shadow */
+    max-width: 400px;
+    margin: 20px auto;
+    position: relative;
+}
+
+h1 {
+    color: #03a9f4; /* Bright blue heading color */
+}
+
+#waterConsumption {
+    background-color: #0288d1; /* Darker blue for the data box */
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* Create a gradient marquee background */
+#waterConsumption::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ff9900, #ff00cc, #ff3399); /* Gradient background */
+    animation: moveBackground 5s linear infinite; /* Animation for movement */
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+p {
+    font-size: 24px;
+}
